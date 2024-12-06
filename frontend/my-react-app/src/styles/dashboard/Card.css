@@ -3,6 +3,12 @@
     border-radius: 20px;
     width: 220px;
     height: 245px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-container p {
@@ -34,7 +40,36 @@
     justify-content: flex-start;
 }
 
+.answer {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .date {
+    margin-top: 20px;
     font-size: 13px;
     color: grey;
+}
+
+.mood,
+.energy {
+    display: flex;
+}
+
+.more-space {
+    margin-left: 10px;
+}
+
+.more-space2 {
+    margin-left: 5px;
+}
+
+.checked {
+    color: rgb(255, 217, 0);
+}
+
+.bolt {
+    color: rgb(255, 217, 0);
 }

@@ -10,8 +10,26 @@ function Card({ id, date, mood, energy, prompt, answer }) {
             <div className="card-info-container">
                 <div className="card-info">
                     <p className="answer">{answer}</p>
-                    <p className="mood">Mood: {mood}</p>
-                    <p className="energy">Energy: {energy}</p>
+                    <p className="mood">Mood: <span className="more-space"></span>
+                        <div className="stars">
+                            {[...Array(mood)].map((_, index) => (
+                                <>
+                                    <i className="fa fa-star checked"></i>
+                                    <span className="more-space2"></span>
+                                </>
+                            ))}
+                        </div>
+                    </p>
+                    <p className="energy">Energy: <span className="more-space"></span>
+                        <div className="bolts">
+                            {[...Array(energy)].map((_, index) => (
+                                <>
+                                    <i className="fa fa-bolt bolt"></i>
+                                    <span className="more-space"></span>
+                                </>
+                            ))}
+                        </div>
+                    </p>
                     <p className="date">{date}</p>
                 </div>
             </div>

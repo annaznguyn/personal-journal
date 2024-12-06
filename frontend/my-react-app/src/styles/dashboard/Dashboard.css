@@ -16,9 +16,24 @@
     margin-left: 30px;
 }
 
-/* .cards {
+.header {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-} */
+    justify-content: space-between;
+}
+
+.header button {
+    margin-right: 30px;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 40px;
+    width: 100px;
+    border: 1px solid transparent;
+    color: white;
+    background-color: rgba(133, 5, 184, 0.692);
+    /* background-color: rgba(201, 99, 241, 0.692); */
+}
+
+.header button:hover {
+    color: white;
+    background-color: rgba(121, 0, 168, 0.911);
+}

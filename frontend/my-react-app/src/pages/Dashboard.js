@@ -5,17 +5,23 @@ import Cards from "../components/dashboard/Cards.js"
 
 function Dashboard() {
     return (
-        <div>
+        <>
+            <head>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+            </head>
             <Navbar />
             <div className="dashboard-container">
                 <div className="dashboard">
-                    <h2>Dashboard</h2>
+                    <div className="header">
+                        <h2>Journals</h2>
+                        <button><i class="fa fa-plus"></i> Create</button>
+                    </div>
                     <div className="cards">
                         <Cards/>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

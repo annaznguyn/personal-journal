@@ -15,10 +15,10 @@ function Cards() {
         {
             "id": 2,
             "date": "1/12/2024",
-            "mood": 2,
-            "energy": 1,
+            "mood": 5,
+            "energy": 5,
             "prompt": "How do you feel?",
-            "answer": "I feel exhausted from hiking today."
+            "answer": "I feel exhausted from hiking today, but FUN. I went hiking with my best friend and I think we walked for 2 hours, approximately 2km."
         },
         {
             "id": 2,
