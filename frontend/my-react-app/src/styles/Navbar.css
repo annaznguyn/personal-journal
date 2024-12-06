@@ -2,16 +2,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(219, 231, 241);
+    /* background-color: rgba(255, 255, 255, 0.87); */
 }
 
 .logo {
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
-    color: black;
-    margin-left: 20px;
+    color: rgb(255, 255, 255);
+    margin-left: 30px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* border-radius: 20px;
+    border: 1px solid white;
+    border-width: 5px; */
 }
 
 .navbar-links ul {
@@ -25,7 +28,7 @@ nav {
 
 .navbar-links ul li a {
     display: block;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 20px;
     text-align: center;
     padding: 15px 20px;
@@ -33,5 +36,5 @@ nav {
 }
 
 li a:hover {
-    background-color: rgb(171, 216, 253);
+    background-color: rgb(222, 188, 238);
 }

@@ -1,0 +1,40 @@
+.card-container {
+    background-color: rgb(221, 175, 235);
+    border-radius: 20px;
+    width: 220px;
+    height: 245px;
+}
+
+.card-container p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.title {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 10px;
+    /* background-color: aquamarine; */
+}
+
+.prompt {
+    font-weight: bold;
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+.card-info-container {
+    background-color: white;
+    height: 180px;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.date {
+    font-size: 13px;
+    color: grey;
+}
