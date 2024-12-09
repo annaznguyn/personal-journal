@@ -1,8 +1,8 @@
-/* main {
-    background-image: url("assets/images/dreamy-clouds.jpg");
+.landing-container {
+    background-image: url("../../assets/images/dreamy-clouds.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100vw;
     margin: 0;
-} */
+}
