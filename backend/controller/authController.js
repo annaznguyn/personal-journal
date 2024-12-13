@@ -1,19 +1,21 @@
 const express = require("express");
+const authService = require("../service/authService");
 
 /**
- * Endpoint of login.
+ * Endpoint of register.
  */
-function login(req, res) {
+function register(req, res) {
     const username = req.body.username;
     const password = req.body.password;
 
     console.log(username, password);
 
     // call service to authenticate
+    authService.register(username, password);
 
-    res.send("Login successful");
+    res.send("Register successful");
 }
 
 module.exports = {
-    login
+    register
 };

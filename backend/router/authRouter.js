@@ -5,6 +5,6 @@ const authController = require("../controller/authController");
 // parse JSON data
 router.use(express.json());
 
-router.post("/login", authController.login);
+router.post("/register", authController.register);
 
 module.exports = router;
