@@ -1,21 +1,28 @@
 const express = require("express");
-const authService = require("../service/authService");
+const authService = require("../service/AuthService");
 
-/**
- * Endpoint of register.
- */
-function register(req, res) {
-    const username = req.body.username;
-    const password = req.body.password;
+class AuthController {
+    
+    /**
+     * Endpoint of user registration.
+     */
+    async register(req, res) {
+        const username = req.body.username;
+        const password = req.body.password;
 
-    console.log(username, password);
+        console.log(username, password);
 
-    // call service to authenticate
-    authService.register(username, password);
+        // call service to insert user
+        const data = await authService.register(username, password);
 
-    res.send("Register successful");
+        // data is null if username already exists
+        if (!data) {
+            res.send("Username already exists");
+            return;
+        }
+
+        res.status(200).json({ message: "Register successful", user: data});
+    }
 }
 
-module.exports = {
-    register
-};
+module.exports = new AuthController();
