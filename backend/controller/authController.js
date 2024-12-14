@@ -1,5 +1,5 @@
 const express = require("express");
-const authService = require("../service/AuthService");
+const authService = require("../service/authService");
 
 class AuthController {
     
@@ -10,18 +10,35 @@ class AuthController {
         const username = req.body.username;
         const password = req.body.password;
 
-        console.log(username, password);
+        // console.log(username, password);
 
         // call service to insert user
         const data = await authService.register(username, password);
 
-        // data is null if username already exists
         if (!data) {
-            res.send("Username already exists");
+            res.send("Something went wrong, no data :(");
             return;
         }
 
         res.status(200).json({ message: "Register successful", user: data});
+    }
+
+    /**
+     * Endpoint for login.
+     */
+    async login(req, res) {
+        const username = req.body.username;
+        const password = req.body.password;
+
+        // call service to authenticate user
+        const data = await authService.login(username, password);
+
+        if (!data) {
+            res.send("Something went wrong, no data :(");
+            return;
+        }
+
+        res.status(200).json({ message: "Login successful", user: data});
     }
 }
 
