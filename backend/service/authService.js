@@ -11,7 +11,7 @@ class AuthService {
      * @param password Input password.
      * @returns Inserted data.
      */
-    async register(username, password) {
+    async signup(username, password) {
         try {
             // check if username already exists
             const { data: checkData, error: checkError } = await database
@@ -55,6 +55,12 @@ class AuthService {
         }
     }
 
+    /**
+     * Check if username exists and if input password is correct.
+     * @param username Input username.
+     * @param password Input password.
+     * @returns A boolean value to indicate if login is successful.
+     */
     async login(username, password) {
         try {
             // check if username exists

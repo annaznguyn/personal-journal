@@ -6,14 +6,14 @@ class AuthController {
     /**
      * Endpoint of user registration.
      */
-    async register(req, res) {
+    async signup(req, res) {
         const username = req.body.username;
         const password = req.body.password;
 
         // console.log(username, password);
 
         // call service to insert user
-        const data = await authService.register(username, password);
+        const data = await authService.signup(username, password);
 
         if (!data) {
             res.send("Something went wrong, no data :(");
