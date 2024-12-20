@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Navbar.css";
+// import "../styles/Navbar.css";
 
 const Navbar = () => {
     return (
@@ -9,7 +9,7 @@ const Navbar = () => {
                 <ul>
                     <li><a href="/dashboard">Home</a></li>
                     <li><a href="/journal">Journal</a></li>
-                    <li><a href="/login">Login/Signup</a></li>
+                    <li><a href="/login">Profile</a></li>
                 </ul>
             </div>
         </nav>

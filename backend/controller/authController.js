@@ -33,12 +33,13 @@ class AuthController {
         // call service to authenticate user
         const data = await authService.login(username, password);
 
+        // wrong username or password
         if (!data) {
-            res.send("Something went wrong, no data :(");
+            res.status(400).json({message: "Wrong username or password", user: data});
             return;
         }
 
-        res.status(200).json({ message: "Login successful", user: data});
+        res.status(200).json({message: "Login successful", user: data});
     }
 }
 

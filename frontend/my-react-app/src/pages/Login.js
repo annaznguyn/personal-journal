@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Login.css";
+import "../styles/login/Login.css";
 
 function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [error, setErrorMessage] = useState("");
     const navigate = useNavigate();
 
     async function handleSubmit(e) {
@@ -28,7 +29,8 @@ function Login() {
 
         if (!res.ok) {
             const err = await res.json();
-            console.error("Error:", err.message);
+            console.log("Wrong username or password");
+            setErrorMessage(err.message);
             return;
         }
 
@@ -37,25 +39,37 @@ function Login() {
     }
 
     return (
-        <>
-            <h1>Login page</h1>
-            <div className="login-info">
-                <p>Username</p>
-                <input
-                    type="text"
-                    id="username"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}/>
-                <p>Password</p>
-                <input
-                    type="password"
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}/>
+        <div className="login">
+            <nav>
+                <a href="/" className="login-logo">MindFlow</a>
+            </nav>
+            <div className="login-container">
+                <div className="login-content">
+                    <div className="login-info">
+                        <p className="small-logo">MindFlow</p>
+                        <p className="username">Username</p>
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="HandSanitiser"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}/>
+                        <p className="password">Password</p>
+                        <input
+                            type="password"
+                            id="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}/>
+                    </div>
+                    <button type="button" onClick={handleSubmit}>Log In</button>
+
+                    {/* display error message when username and/or password is wrong */}
+                    {error && <p className="login-error">{error}</p>}
+
+                    <p className="signup-suggestion">No Account Yet? <a href="/signup" className="signup-link">Sign Up</a></p>
+                </div>
             </div>
-            <button type="button" onClick={handleSubmit}>Login</button>
-            <p>No Account? <a href="/signup" className="signup-link">Sign Up</a></p>
-        </>
+        </div>
     );
 }
 

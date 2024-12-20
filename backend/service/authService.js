@@ -74,10 +74,10 @@ class AuthService {
                 return null;
             }
             
-            // if username doesn't exist, return null
+            // if username doesn't exist, return false
             if (checkData.length == 0) {
                 console.log("Username doesn't exist");
-                return null;
+                return false;
             }
 
             // retrieve hashed password
@@ -90,10 +90,11 @@ class AuthService {
                 console.error("Error fetching password:", fetchError.message);
                 return null;
             }
-
+            
+            // if password doesn't exist, return false
             if (hash.length == 0) {
                 console.log("There's something wrong. Password doesn't exist.");
-                return null;
+                return false;
             }
 
             // console.log("Hashed:", typeof hash[0].password, hash[0].password);

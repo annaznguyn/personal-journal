@@ -1,0 +1,109 @@
+.login {
+    background-image: url("../../assets/images/dreamy-clouds.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.login nav {
+    background-color: rgba(184, 79, 253, 0.671);
+    /* background-color: white; */
+    padding: 15px 30px;
+}
+
+.login-logo {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.login-container  {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); 
+}
+
+.login-content {
+    display: grid;
+    grid-auto-flow: row;
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.login-content button {
+    width: 85px;
+    height: 40px;
+    background-color: rgb(162, 73, 245);
+    border: 1px solid transparent;
+    border-radius: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    justify-self: center;
+}
+
+.login-content button:hover {
+    background-color: rgb(140, 24, 248);
+}
+
+.login-content .small-logo {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    background: linear-gradient(90deg, #ff7eb9, #ff65a3, #7afcff);
+    background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.login-info .username,
+.login-info .password,
+.login-info input {
+    margin-left: 95px;
+}
+
+.login-info p {
+    font-size: 25px;
+}
+
+.login-info input {
+    border-radius: 10px;
+    height: 33px;
+    width: 300px;
+    padding-left: 10px;
+    background-color: rgba(228, 228, 228, 0.452);
+    border: 1px solid transparent;
+}
+
+.login-info input:focus {
+    border: 2px solid;
+    background-color: white;
+}
+
+.signup-link {
+    color: rgb(162, 73, 245);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.login-error {
+    color: red;
+}
+
+.signup-suggestion {
+    margin-top: 20px;
+    text-align: center;
+}
